@@ -17,6 +17,7 @@ package com.example.wordsapp
 
 import android.content.Context
 import android.os.Build
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -81,6 +82,10 @@ class WordAdapter(private val letterId: String, context: Context) :
 
         // Set the text of the WordViewHolder
         holder.button.text = item
+
+        holder.button.setOnClickListener {
+            Log.d("vvvib", "clicked on word $item")
+        }
 
     }
     // Setup custom accessibility delegate to set the text read with
