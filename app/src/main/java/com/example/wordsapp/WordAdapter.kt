@@ -16,6 +16,8 @@
 package com.example.wordsapp
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.util.Log
 import android.view.LayoutInflater
@@ -85,6 +87,9 @@ class WordAdapter(private val letterId: String, context: Context) :
 
         holder.button.setOnClickListener {
             Log.d("vvvib", "clicked on word $item")
+            val queryUrl: Uri = Uri.parse("${DetailActivity.SEARCH_PREFIX}$item")
+            val intent = Intent(Intent.ACTION_VIEW, queryUrl)
+            context.startActivity(intent)
         }
 
     }
