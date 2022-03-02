@@ -53,7 +53,7 @@ class WordListFragment : Fragment() {
         recyclerView.addItemDecoration(
             DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
         )
-        activity?.title = getString(R.string.detail_prefix) + " " + letterId
+//        activity?.title = getString(R.string.detail_prefix) + " " + letterId
     }
 
     override fun onDestroyView() {
