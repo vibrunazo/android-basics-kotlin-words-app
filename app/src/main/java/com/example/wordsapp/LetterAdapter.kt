@@ -69,12 +69,6 @@ class LetterAdapter :
             Log.d("vvvib", "clicked on letter ${item.toString()}")
             val action = LetterListFragmentDirections.actionLetterListFragmentToWordListFragment(letter = holder.button.text.toString())
             holder.view.findNavController().navigate(action)
-
-//            val context = holder.view.context
-//            val intent = Intent(context, DetailActivity::class.java)
-//            intent.putExtra(WordListFragment.LETTER, holder.button.text.toString())
-//            context.startActivity(intent)
-
         }
     }
 
